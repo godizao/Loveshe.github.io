@@ -1,0 +1,95 @@
+<!-- content.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S + K</title>
+    <!-- Add any additional meta tags, stylesheets, or scripts here -->
+    <!-- Favicon -->
+    <link rel="icon" href="images/hd.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+            <!-- Linking the JavaScript file -->
+            <script>
+                function toggleNav() {
+                    var navLinks = document.getElementById("navLinks");
+                    navLinks.style.display = (navLinks.style.display === "block") ? "none" : "block";
+                }
+                
+                
+                        </script>
+</head>
+
+<body>
+    <!-- Header with links to other pages -->
+    <header>
+        <h1>Oi meu amor. Fiz com todo meu amor inspirado no sua saga de filme preferido.</h1>
+        <nav>
+            <div class="menu-icon" onclick="toggleNav()" id="navButton">&#8801;</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="content.html">Menu</a></li>
+                <li><a href="ourpictures.html">Nossas fotos</a></li>
+                <li><a href="myfavpics.html">Minhas fotos favoritas</a></li>
+                <li><a href="songsofyou.html">Sons que me lebram você</a></li>
+                <li><a href="thelist.html">A lista...</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <section>
+        <!-- Display the live relationship counter (timer) -->
+        <div id="counter"></div>
+
+        <!-- Script for the timer -->
+        <script>
+            // Function to display the live relationship counter (timer)
+            function displayRelationshipCounter() {
+                var startDate = new Date("September, 2024"); // Placeholder start date
+
+                // Update the counter every second
+                setInterval(function () {
+                    var currentDate = new Date();
+                    var timeDifference = currentDate - startDate;
+
+                    // Calculate years, months, days, hours, minutes, and seconds
+                    var years = Math.floor(timeDifference / (365.25 * 24 * 60 * 60 * 1000));
+                    var months = Math.floor((timeDifference % (365.25 * 24 * 60 * 60 * 1000)) / (30.44 * 24 * 60 * 60 * 1000));
+                    var days = Math.floor((timeDifference % (30.44 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
+                    var hours = Math.floor((timeDifference % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+                    var minutes = Math.floor((timeDifference % (60 * 60 * 1000)) / (60 * 1000));
+                    var seconds = Math.floor((timeDifference % (60 * 1000)) / 1000);
+
+                    // Display the counter
+                    var counterElement = document.getElementById("counter");
+                    if (counterElement) {
+                        counterElement.innerHTML =
+                            "Estamos juntos por: " +
+                            years + " anos, " +
+                            months + " meses, " +
+                            days + " dias, " +
+                            hours + " horas, " +
+                            minutes + " minutos, " +
+                            seconds + " segundos";
+                    }
+                }, 1000); // Update every second
+            }
+
+            // Call the function to start the timer
+            displayRelationshipCounter();
+        </script>
+    <!-- Centered GIF container -->
+    <div class="centered-gif-container">
+        <img class="centered-gif" src="images/gif/2cats.gif" alt="Description of the picture">
+    </div>
+
+</section>
+    </div>
+    
+    <footer>
+        <p class="footer-text">Feito com muito amor e com vc em call rsrs</p>
+    </footer>
+</body>
+
+</html>
+

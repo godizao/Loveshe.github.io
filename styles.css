@@ -1,0 +1,348 @@
+/* Global Styles */
+
+body {
+    background-color: #E6F1F9; /* Light blue */
+    font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #1A4C8A; /* Dark blue */
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #ffffff; /* Set text color to white */
+    display: inline-block; /* Ensure the text is centered */
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #1A4C8A; /* Dark blue */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+}
+
+.menu-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 20px;
+    color: #ffffff; /* Set the color to white */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1A4C8A; /* Dark blue */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-links li {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    text-align: center; /* Center the links */
+}
+
+.nav-links a:hover {
+    background-color: #345C8C; /* Medium blue */
+    color: #ffffff;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #D1E4F1; /* Light blue */
+}
+
+/* Alternate row colors for better readability */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* List Styles */
+dl {
+    margin-bottom: 30px;
+    border-left: 3px solid #1A4C8A; /* Dark blue */
+    padding-left: 20px;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #1A4C8A; /* Dark blue */
+}
+
+dd {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-left: 15px; /* Add left indentation */
+}
+
+/* Add a subtle box shadow to the list items */
+dt, dd {
+    transition: box-shadow 0.3s;
+}
+
+/* Highlight on hover for better user experience */
+dt:hover, dd:hover {
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Centered GIF container */
+.centered-gif-container {
+    text-align: center;
+}
+
+/* Centered GIF styling (adjust as needed) */
+.centered-gif {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Image Styles */
+.image-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: transparent;
+}
+
+/* Style for each image card */
+.image-card {
+    width: 300px;
+    height: 300px; /* Adjust as needed for square images */
+    border: 1px solid #ddd;
+    border-radius: 50%; /* Change to 10px for square images */
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: relative;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire space */
+}
+
+.image-caption {
+    padding: 15px;
+    text-align: center;
+    background-color: #f8f9fa; /* Light background color */
+    border-top: 1px solid #ddd;
+}
+
+/* Pop-up Styles */
+.image-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.popup-image {
+    max-width: 80%;
+    max-height: 80vh;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.popup-caption {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+/* Show/hide pop-up animation */
+.show-popup {
+    display: block !important;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Style for the pop-up arrows */
+.popup-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.left-arrow {
+    left: 15px;
+}
+
+.right-arrow {
+    right: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Figure Caption Styles */
+figcaption {
+    text-align: center;
+}
+
+/* Counter Styles */
+#counter {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Updated Footer Styles */
+footer {
+    background-color: #D1E4F1; /* Light blue */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd; /* Border at the top of the footer */
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer-text {
+    color: #1A4C8A; /* Dark blue text color */
+    font-size: 1.2em;
+}
+
+.footer-link {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Underline link on hover */
+}
+
+.footer-social-icons {
+    margin-top: 15px;
+}
+
+.footer-social-icons a {
+    color: #007bff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-social-icons a:hover {
+    color: #8A9DBF; /* Light silver color on hover */
+}
+
+/* styles.css */
+
+.container.mt-5 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between images as needed */
+    padding: 20px; /* Add padding for spacing inside the card */
+    background-color: transparent;
+    border-radius: 10px; /* Add rounded corners for a card-like appearance */
+}
+
+.container.mt-5 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add rounded corners for images */
+}
+
+.container.mt-5 figure {
+    flex: 1 0 calc(33.333% - 20px); /* Adjust the width of each figure as needed */
+}
+
+/* Add these styles to your existing styles.css file */
+/* Add a subtle box shadow to the list items */
+ul li {
+    transition: box-shadow 0.3s;
+}
